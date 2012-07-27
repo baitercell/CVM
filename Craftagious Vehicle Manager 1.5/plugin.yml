@@ -1,0 +1,6 @@
+name: CVM
+main: craftagious.vehicleManager.Main
+version: 1.5
+
+description: Manages vehicles for Craftagious
+author: Baitercell
