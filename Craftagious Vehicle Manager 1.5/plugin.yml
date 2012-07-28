@@ -4,3 +4,8 @@ version: 1.5
 
 description: Manages vehicles for Craftagious
 author: Baitercell
+
+commands:
+   cvm:
+      description: Help command for CVM
+      usage: /<command>
