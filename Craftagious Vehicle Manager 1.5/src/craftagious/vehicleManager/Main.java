@@ -29,24 +29,37 @@ public class Main extends JavaPlugin
 	
     public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args)
     {
-    	Player p = (Player) sender;
+    	Player p = null;
+    	
+    	if (sender instanceof Player)
+    	{
+    		p = (Player) sender;
+    	}
+    	
     	if(cmd.getName().equalsIgnoreCase("cvm")) // If the player typed /cvm
     	{
-    		p.sendMessage(ChatColor.GREEN + "[CVM]" + ChatColor.GOLD + "CVM Help");
-    		p.sendMessage(" ");
-    		p.sendMessage(ChatColor.GREEN + "[CVM]" + ChatColor.GOLD + "How to use:");
-    		p.sendMessage(ChatColor.GREEN + "[CVM]" + ChatColor.GOLD + "Just get into a cart looking the direction you");
-    		p.sendMessage(ChatColor.GREEN + "[CVM]" + ChatColor.GOLD + "want to go and CVM will make you move.");
-    		p.sendMessage(" ");
-    		p.sendMessage(ChatColor.GREEN + "[CVM]" + ChatColor.GOLD + "Exiting a Cart:");
-    		p.sendMessage(ChatColor.GREEN + "[CVM]" + ChatColor.GOLD + "If the rail track you are on does not have");
-    		p.sendMessage(ChatColor.GREEN + "[CVM]" + ChatColor.GOLD + "obsidian at the end of the rail, just get out normally and");
-    		p.sendMessage(ChatColor.GREEN + "[CVM]" + ChatColor.GOLD + "CVM will sort the cart out.");  		
-    		p.sendMessage(" ");	
-    		p.sendMessage(ChatColor.GREEN + "[CVM]" + ChatColor.GOLD + "CVM will also remove those glitchy boats!");	
-    		p.sendMessage(" ");
-    		p.sendMessage(ChatColor.GREEN + "[CVM]" + ChatColor.GOLD + "Thanks for using CVM");
-    		return true;
+    		if(p == null)
+    		{
+    			sender.sendMessage(ChatColor.GREEN + "[CVM]" + ChatColor.GOLD + "CVM Help can only be run by a player");
+    		}
+    		else
+    		{
+    			p.sendMessage(ChatColor.GREEN + "[CVM]" + ChatColor.GOLD + "CVM Help");
+    			p.sendMessage(" ");
+    			p.sendMessage(ChatColor.GREEN + "[CVM]" + ChatColor.GOLD + "How to use:");
+	    		p.sendMessage(ChatColor.GREEN + "[CVM]" + ChatColor.GOLD + "Just get into a cart looking the direction you");
+	    		p.sendMessage(ChatColor.GREEN + "[CVM]" + ChatColor.GOLD + "want to go and CVM will make you move.");
+	    		p.sendMessage(" ");
+	    		p.sendMessage(ChatColor.GREEN + "[CVM]" + ChatColor.GOLD + "Exiting a Cart:");
+	    		p.sendMessage(ChatColor.GREEN + "[CVM]" + ChatColor.GOLD + "If the rail track you are on does not have");
+	    		p.sendMessage(ChatColor.GREEN + "[CVM]" + ChatColor.GOLD + "obsidian at the end of the rail, just get out normally and");
+	    		p.sendMessage(ChatColor.GREEN + "[CVM]" + ChatColor.GOLD + "CVM will sort the cart out.");  		
+	    		p.sendMessage(" ");	
+	    		p.sendMessage(ChatColor.GREEN + "[CVM]" + ChatColor.GOLD + "CVM will also remove those glitchy boats!");	
+	    		p.sendMessage(" ");
+	    		p.sendMessage(ChatColor.GREEN + "[CVM]" + ChatColor.GOLD + "Thanks for using CVM");
+	    		return true;
+    		}
     	}
     	return false; 
     }
