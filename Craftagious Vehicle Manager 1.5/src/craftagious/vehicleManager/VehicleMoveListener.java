@@ -47,7 +47,8 @@ public class VehicleMoveListener implements Listener
 				//System.out.println("over speed " + event.getVehicle().getVelocity().length());
 				//Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), "say " + "over speed " + event.getVehicle().getVelocity().length());   	
 				
-				e.setVelocity(v.add(v.multiply(-0.4)));
+				e.setVelocity(v.add(v.multiply(0.4)));
+				//System.out.println("over speed " + event.getVehicle().getVelocity().length());
 			}
 		}	
 	}
