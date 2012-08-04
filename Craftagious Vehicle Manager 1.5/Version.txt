@@ -1,3 +1,5 @@
 1.5 - Initial release
 
 1.5.1 - Fixed overspeed reversing direction
+
+1.5.2 Added VehicleRemover class to clean up code

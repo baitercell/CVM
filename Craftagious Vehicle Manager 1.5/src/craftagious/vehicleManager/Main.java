@@ -44,7 +44,7 @@ public class Main extends JavaPlugin
     		}
     		else
     		{
-    			p.sendMessage(ChatColor.GREEN + "[CVM]" + ChatColor.GOLD + " CVM Help");
+    			p.sendMessage(ChatColor.GREEN + "[CVM]" + ChatColor.GOLD + " Craftagious Vehicle Manager Help");
     			p.sendMessage(" ");
     			p.sendMessage(ChatColor.GREEN + "[CVM]" + ChatColor.GOLD + " How to use:");
 	    		p.sendMessage(ChatColor.GREEN + "[CVM]" + ChatColor.GOLD + " Just get into a cart looking the direction you");
@@ -62,5 +62,5 @@ public class Main extends JavaPlugin
     		}
     	}
     	return false; 
-    }
+    }  
 }
